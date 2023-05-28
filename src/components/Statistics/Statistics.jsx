@@ -19,7 +19,11 @@ function Statistics({ title, stats }) {
 }
 
 Statistics.propTypes = {
-    stats: PropTypes.array,
+    stats: PropTypes.arrayOf(PropTypes.exact({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })),
     title: PropTypes.string,
   };
 

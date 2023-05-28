@@ -25,8 +25,17 @@ function TransactionHistory({ items }) {
   );
 }
 
+const invoiceShape = {
+  id: PropTypes.string.isRequired,
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+};
+
+const invoicesArrayShape = PropTypes.arrayOf(PropTypes.shape(invoiceShape));
+
 TransactionHistory.propTypes = {
-    transaction: PropTypes.object,
-  };
+  items: invoicesArrayShape.isRequired,
+};
 
 export default TransactionHistory;
