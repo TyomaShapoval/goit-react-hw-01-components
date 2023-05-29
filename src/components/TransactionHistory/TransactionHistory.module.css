@@ -6,7 +6,7 @@
   .transaction-history th,
   .transaction-history td {
     padding: 8px;
-    border: 1px solid #cccccc;
+    border: 1px solid #ccc;
   }
   
   .transaction-history th {
